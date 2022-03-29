@@ -2,7 +2,10 @@
 /* ***************************************************** */
 /* DEFOULT STYLE */
 
-*::-webkit-scrollbar { display: none; }
+::-webkit-scrollbar { 
+    display: none;
+    -webkit-appearance: none; 
+}
 
 * { 
     margin: 0; padding: 0;
