@@ -1,0 +1,1211 @@
+/* ***************************************************** */
+/* ***************************************************** */
+/* DEFOULT STYLE */
+
+::-webkit-scrollbar { display: none; }
+
+* { 
+    margin: 0; padding: 0;
+    text-decoration: none; 
+    color: inherit;
+}
+
+body {
+    width: 100vw; 
+    background-color: #f19072;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    .pc-center {
+        width: 60vw;
+        margin-left: 20vw;
+    }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* FONT STYLE */
+
+section { font-size: 0; }
+
+p, a, h1, h2, h3, h4, h5, ul, li, ol, ::placeholder,
+table, select, button, span, label, input, textarea 
+{
+    display: inline-block;
+    font-weight: normal; line-height: 1.7;
+    font-family: 'Hiragino Sans W0','メイリオ', 'Meiryo', sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+li { 
+    list-style-position: inside;
+    display: list-item; text-align: left;
+}
+
+h1, h2, h3 { 
+    display: block; 
+    font-family: 'Hiragino Sans W1','メイリオ', 'Meiryo', sans-serif;
+    font-weight: bold;
+    }
+::placeholder { color: rgba(0,0,0,0.2); }
+
+@media screen and (max-width: 767px)  /* SP */
+{   
+    h1 { 
+        margin-top: 2vw;
+        color: white;
+        font-size: 5vw; 
+    }
+    h2 { font-size: 5vw; }
+    h3 { font-size: 4.7vw; }
+    h4 { font-size: 4.2vw; }
+
+    p, a,label, table, button, span, ul, li, ol, 
+    input, select, textarea, ::placeholder
+    { 
+        font-size: 4vw; 
+    }
+}
+
+@media screen and (min-width: 768px) /* PC */
+{   
+    h1 { 
+        margin-bottom: 3vh;
+        color: white;
+        font-size: 2vw; 
+    }
+    h2 { font-size: 2vw; }
+    h3 { font-size: 1.7vw; }
+    h4 { font-size: 1.6vw; }
+
+    p, a,label, table, button, span, ul, li, ol,
+    input, select, textarea, ::placeholder
+    { 
+        font-size: 1.4vw; 
+    }
+
+} 
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* FORM STYLE */
+
+select, textarea {
+    resize: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #f19072;
+    background-color: white;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+}
+
+input {
+    margin-top: 0;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #f19072;
+    background-color: white;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+} 
+
+select:focus, input:focus, textarea:focus {
+    outline: 1vw solid rgba(244,144,114,0.4);
+    border-radius: 2vw;
+}
+
+label {
+    width: 80%;
+    padding: 5% 0 0 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    select, input, textarea {
+        width: calc(80% - 4vw);
+        padding: 1vw 2vw;
+    }
+    
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    select:focus, input:focus, textarea:focus {
+        outline: 0.4vw solid rgba(244,144,114,0.4);
+        border-radius: 1vw;
+    }
+
+    select, input, textarea {
+        width: calc(80% - 2vw);
+        padding: 0.5vw 1vw;
+    }
+    
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* DISPLAY NONE CLASS レスポンシブによって消す要素 */
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .pc-side-menu
+    { 
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    #sp-hd-id, #sp-hd-menu-id 
+    { 
+        display: none; 
+    }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* SP HEADER AND FOOTER */
+
+#sp-hd-id {
+    /* スクロール位置によって表示変わる スマホ header */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 12vw;
+    background-color: #f19072;
+    z-index: 100; 
+    opacity: 1;
+    transition: 0.6s;
+    border-bottom: 1px white solid;
+}
+
+#sp-hd-id.sp-header-on {
+    display: inline;
+    opacity: 1;
+}
+
+#sp-hd-id > img {
+    position: absolute;
+    top: 2vw; left: 2vw;
+    width: 8vw; height: 8vw;
+}
+
+#sp-hd-btn-id {
+    display: flex; 
+    position: fixed;
+    top: 1vw; right: 1vw;
+    width: 8vw; height: 8vw;
+    margin: 1vw;
+    border: none; outline: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 110;
+}
+
+.sp-hd-line {
+    position: relative;
+    width: 80%; height: 0.8vw;
+    background-color: white;
+    border-radius: 1vw;
+    transition: 0.2s;
+    z-index: 110;
+}
+
+.sp-hd-line::before, .sp-hd-line::after 
+{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: white;
+    border-radius: 1vw;
+    transition: 0.2s; 
+    z-index: 110;
+}
+
+.sp-hd-line::before { transform:  translateY( -2vw ); }
+.sp-hd-line::after  { transform:  translateY(  2vw ); }
+
+.sp-hd-line.sp-hd-line-active { 
+    transform: rotate(180deg);
+    top: -1vw;
+    background-color: transparent;
+}
+
+.sp-hd-line.sp-hd-line-active::before{
+    transform: rotate(135deg);
+}
+  
+.sp-hd-line.sp-hd-line-active::after {
+    transform: rotate(-135deg);
+}
+
+#sp-hd-menu-id {
+    /* btnで開閉するメニュー */
+    position: fixed;
+    top: 12vw; right: -42vw;
+    width: 40vw; height: 100vh;
+    padding: 1vw;
+    background-color: white;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+#sp-hd-menu-id.sp-hd-menu-active {
+    right: 0;
+    transition: 0.4s;
+    opacity: 1;
+    z-index: 100;
+}
+
+#sp-hd-menu-id > a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 4vw 0;
+    color: #f19072;
+}
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    
+    footer div > a {
+        width: 100%;
+        margin: 2vw 0;
+        font-size: 3.5vw;
+    }
+    
+}
+
+footer {
+    padding-top: 10vw;
+    background-color: white;
+}
+
+footer > p {
+    padding: 4vw 0;
+    font-size: 1.6vw;
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* PC HEADER AND FOOTER */
+
+.pc-side-menu {
+    position: fixed;
+    width: 20vw; height: 100vh;
+    background-color: #f19072;
+    border-right: 1px solid white;
+    z-index: 100;
+}
+
+.pc-side-menu > img {
+    width: 12vw; height: 12vw;
+    margin-top: 2vh;
+}
+
+.pc-side-menu a {
+    display: block;
+    width: 100%;
+    padding: 3vh 0;  
+    color: white;
+    transition: 0.1s;
+}
+
+.pc-side-menu a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    footer {
+        width: 60vw;
+        margin-left: 20vw;
+        padding-top: 10vw;
+        background-color: white;
+    }
+    
+    footer div  { display: none; }
+
+    footer > p {
+        font-size: 1.2vw;
+    }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* START SECTION */
+
+.start-sec {
+    position: sticky;
+    overflow: hidden;
+    top: 0; left:0;
+    z-index: -1;
+}
+
+.start-sec > h2 {
+    position: absolute;
+    writing-mode: vertical-rl;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 0.8s;
+    animation-name: h2-anime;
+    color: white;
+    opacity: 0;
+}
+
+@keyframes h2-anime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.start-sec > .img-tyawan {
+    position: absolute;
+}
+
+.yuge-box {
+    position: relative;
+}
+
+.yuge-box > img { 
+    position: absolute;
+    width: 0;
+    top: 0; left: 0;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+.img-yuge-01 { animation-name: yuge-anm1; animation-delay: -2s; }
+.img-yuge-02 { animation-name: yuge-anm2; animation-delay: -4s; }
+.img-yuge-03 { animation-name: yuge-anm3; animation-delay: -6s; }
+.img-yuge-04 { animation-name: yuge-anm1; animation-delay: -8s; }
+.img-yuge-05 { animation-name: yuge-anm2; animation-delay: -10s; }
+.img-yuge-06 { animation-name: yuge-anm3; animation-delay: -12s; }
+.img-yuge-07 { animation-name: yuge-anm1; animation-delay: -14s; }
+.img-yuge-08 { animation-name: yuge-anm2; animation-delay: -16s; }
+.img-yuge-09 { animation-name: yuge-anm3; animation-delay: -18s; }
+.img-yuge-10 { animation-name: yuge-anm1; animation-delay: -20s; }
+
+@keyframes yuge-anm1 {
+    0% { width: 10%; top: 65%; left: 49vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    100% { width: 24%; top: 17%; left: 41vw; opacity: 0; }
+}
+
+@keyframes yuge-anm2 {
+    0% { width: 10%; top: 64%; left: 48vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    100% { width: 25%; top: 16%; left: 40vw; opacity: 0; }
+}
+
+@keyframes yuge-anm3 {
+    0% { width: 10%; top: 63%; left: 47vw; opacity: 0; }
+    50% { opacity: 0.6; }
+    100% { width: 26%; top: 15%; left: 39vw; opacity: 0; }
+}
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .start-sec { height: 112vh; }
+    
+    .start-sec > .img-tyawan {
+        width: 28vw;
+        top: 70vh; left: 37vw;
+    }
+
+    .start-sec h2:nth-of-type(1) { 
+        top: 30vw; right: 10vw; 
+        animation-delay: 1s;
+    }
+    
+    .start-sec h2:nth-of-type(2) { 
+        top: 30vw; left: 10vw; 
+        animation-delay: 2.5s;
+    }
+    
+    .start-sec h2:nth-of-type(3) { 
+        top: 64vw; left: 10vw;
+        animation-delay: 4s;
+    }
+
+    .yuge-box {
+        top: 0; left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    .start-sec { 
+        height: 134vh; 
+        border-right: 1px solid white;
+    }
+
+    .start-sec > .img-tyawan {
+        width: 10vw;
+        top: 65vh; left: 18vw;
+    }
+
+    .start-sec h2:nth-of-type(1) { 
+        top: 24vh; right: 10vw; 
+        animation-delay: 1s;
+    }
+    
+    .start-sec h2:nth-of-type(2) { 
+        top: 24vh; right: 15vw; 
+        animation-delay: 2.5s;
+    }
+    
+    .start-sec h2:nth-of-type(3) { 
+        top: 24vh; right: 20vw;
+        animation-delay: 4s;
+    }
+
+    .yuge-box {
+        top: -6vw; left: -27vw;
+        width: 60vw;
+        height: 100vh;
+        /* background-color: rgba(0,0,0,0.1); */
+    }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* QUESTION SECTION */
+
+.question-sec {
+    position: relative;
+    background-color: white;
+}
+
+.question-sec > img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    z-index:-1;
+}
+
+.question-sec > h2 { color: black; }
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .question-sec {  width: 100%; }
+
+    .question-sec > img { top: -40vw; }
+
+    .question-sec > h2 { padding-top: 12vw; }
+
+    .question-sec > p {
+        width: calc(100% - 20vw);
+        padding: 10vw;
+    }
+}
+@media screen and (min-width: 768px) /* PC */
+{
+    .question-sec > img { top: -24vw; }
+
+    .question-sec > h2 { padding-top: 5vw; }
+
+    .question-sec > p {
+        width: calc(100% - 20vw);
+        padding: 10vw;
+    }
+}
+/* ***************************************************** */
+/* ***************************************************** */
+/* ABOUT SECTION */
+
+.about-sec {
+    position: relative;
+    background-color:#f19072;
+}
+
+.about-sec > img {   
+    position: absolute;
+    width: 100%;
+    transform: scale(-1,-1);
+}
+
+.about-sec > div {
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+}
+
+.about-sec h2 { color: white; }
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .about-sec { width: 100%; padding-top: 45vw; }
+
+    .about-sec > img {  top: -10vw; left: 0; }
+
+    .about-sec h2 { padding-bottom: 12vw; }
+
+    .about-sec > div {
+        width: 88vw;
+        margin: 6vw 6vw 0 6vw;
+        padding: 8vw 0;
+        border-radius: 2vw;
+        background-image: linear-gradient(
+            180deg,
+            white 0 22vw,
+            rgba(255,255,255,0.2) 22vw 100%
+        )
+    }
+
+    .about-sec h3 { 
+        padding-bottom: 10vw; 
+        color:#f19072;
+    }
+
+    .about-sec div > img {
+        width: 40vw;
+        margin: 8vw 0;
+    }
+
+    .about-sec > div {
+        border-radius: 2vw;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    } 
+
+    .about-sec p {
+        color: white;
+        width: 80%;
+        margin: 2vw 10%;
+    }
+
+}
+@media screen and (min-width: 768px) /* PC */
+{
+    .about-sec { padding-top: 18vw; }
+    
+    .about-sec > img {  top: -10vw; left: 0; }
+
+    .about-sec h2 { padding-bottom: 1vw; }
+
+    .about-sec > div {
+        width: 50vw;
+        margin: 5vw 5vw 0 5vw;
+        padding: 4vw 0;
+        border-radius: 1.4vw;
+        background-image: linear-gradient(
+            180deg,
+            white 0 10vw,
+            rgba(255,255,255,0.2) 10vw 100%
+        )
+    }
+
+    .about-sec h3 { 
+        padding-bottom: 2vw; 
+        color:#f19072;
+    }
+
+    .about-sec div > img {
+        position: absolute;
+        width: 12vw;
+        bottom: 7vw; left: 5vw;
+    }
+
+    .about-sec p {
+        color: white;
+        width: 50%;
+        padding: 10vw 2vw 5vw 2vw;
+        margin-left: 20vw;
+     }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* GOOD SECTION */
+
+.good-sec { background-color:#f19072; }
+
+.good-sec h2 { color:white; }
+
+.good-sec td {
+    padding: 4vw;
+    color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 0 3px rgba(0,0,0,0.2);
+}
+
+.good-sec td:nth-child(odd) {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.good-sec th {
+    width: 70%;
+    font-weight: normal;
+    color: white;
+}
+
+.good-sec th:nth-child(odd) { width: 30%; }
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .good-sec { padding-bottom: 60vw; }
+
+    .good-sec h2 { padding-top: 30vw; }
+
+    .good-sec table {
+        margin: 6vw 2vw 0 2vw;
+        border-spacing: 2vw;
+    }
+
+    .good-sec td { border-radius: 2vw; }
+}
+@media screen and (min-width: 768px) /* PC */
+{
+    
+    .good-sec { 
+        padding-top: 10vw;
+        padding-bottom: 30vw;
+    }
+
+    .good-sec table {
+        margin: 4vw 2vw 0 2vw;
+        border-spacing: 0.8vw;
+    }
+
+    .good-sec td { border-radius: 1vw; }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* ITEM SECTION */
+
+.item-sec {
+    position: relative;
+    background-color: white;
+}
+
+.item-sec > img {
+    position: absolute; 
+    left: 0;
+    z-index: 0;
+}
+
+.item-sec button {
+    background-color: #f19072;
+    border: none; outline: none;
+    color: white;
+}
+
+.item-sec h4 { width: 80%; padding-top: 5%;}
+
+.item-sec p { width: 70%; padding-top: 5%;}
+
+.item-sec button { width: 80%; padding: 3% 5%; }
+
+.item-sec table { width: 100%; padding: 5% 5% 0 5%; }
+
+.table-pink th:nth-child(odd) { width: 20%; }
+
+.table-pink th:nth-child(even) { width: 30%; }
+
+.table-pink td:nth-child(odd) {
+    background-color: rgba(244,144,114,0.2);
+}
+
+.table-pink td:nth-child(even) {
+    background-color: rgba(241,144,114,0.6);
+}
+
+.table-pink th { padding: 2vw; color: #f19072; }
+
+.table-pink td {  padding: 2vw; }
+
+.table-white th { 
+    width: 20%; 
+    padding: 2vw;
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    background-color: rgba(244,144,114,0.4);
+}
+
+.table-white td { 
+    width: 30%; 
+    padding: 2vw;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    background-color: rgba(244,144,114,0.6);
+}
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    
+    .item-sec { padding-bottom: 20vw; }
+
+    .item-sec > img { top: -40vw; width: 100%; }
+    
+    .item-sec > h2 {
+        padding-top: 24vw;
+        padding-bottom: 12vw;
+    }
+    
+    .item-sec > div {
+        width: calc(88vw - 1vw);
+        margin: 6vw 6vw 0 6vw;
+        padding: 8vw 0;
+        border-radius: 2vw;
+        border: #f19072 0.5vw solid;
+    }
+
+    .item-sec div > img {
+        width: 28vw;
+        padding: 10vw 0 6vw 0;
+    }
+
+    .item-sec h4 { margin: 4vw 0; }
+
+    .item-sec select {
+        width: 80%;
+        margin: 5%;
+        padding: 3% 5%;
+        text-align: center;
+        border: 1px solid #f19072;
+    }
+
+    .table-pink th, .table-pink td {
+        border-radius: 2vw;
+    }
+
+    .table-white { border-spacing: 0 2vw; }
+
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    .item-sec > img { top: -26vw; width: 100%; }
+    
+    .item-sec > h2 {
+        padding-top: 12vw;
+    }
+    
+    .item-sec > div {
+        width: calc(50vw - 0.4vw);
+        margin: 6vw 5vw 0 5vw;
+        padding: 2vw 0;
+        border-radius: 1vw;
+        border: #f19072 0.2vw solid;
+    }
+
+    .item-sec div > img {
+        width: 15vw;
+        padding: 3vw 0;
+    }
+
+    .item-sec select {
+        width: 70%;
+        margin: 3% 10%;
+        margin-top: 6%;
+        padding: 3% 5%;
+        text-align: center;
+        border: 1px solid #f19072;
+    }
+
+    .item-sec button {
+        width: 70%;
+        padding: 3% 10%;
+        margin-bottom: 3%;
+    }
+
+    .item-sec select:hover ,.item-sec button:hover {
+        transition: 0.4s;
+        border-radius: 3vw;
+    }
+
+    .item-sec button:focus {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .table-pink { border-spacing: 0.5vw; }
+
+    .table-pink th, .table-pink td {
+        border-radius: 1vw;
+    }
+
+    .table-white { border-spacing: 0 1vw; }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* COMMENT SECTION */
+
+.comment-sec { 
+    position: relative; 
+    background-color: #f19072;
+}
+
+.comment-sec > img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    transform: scale(-1,-1);
+}
+
+.comment-sec > h2 { color: white; padding-bottom: 8vw; }
+
+.comment-sec div > div {
+    background-color: white;
+    box-shadow: 0 3px rgba(0,0,0,0.2);
+    padding: 5% 3% 8% 3%;
+}
+
+.comment-sec h3 { padding: 2vw 0; }
+
+.comment-sec p { width: 80%; }
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .comment-sec { padding-top: 70vw; }
+
+    .comment-sec div > div {
+        width: 84%;
+        margin: 3% 5%;
+        margin-bottom: 0;
+        padding: 5% 3% 8% 3%;
+    }
+
+}
+@media screen and (min-width: 768px) /* PC */
+{
+    .comment-sec {
+        padding-top: 40vw;
+    }
+
+    .comment-sec div > div {
+        display: inline-block;
+        width: 31%;
+        margin: 1% 0.5%;
+        margin-bottom: 0;
+    }
+
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* MAIL SECTION */
+
+.mail-sec {
+    background-color: #f19072;
+    padding-top: 24vw;
+}
+
+.mail-sec h2, .mail-sec p, .mail-sec label { color: white; }
+
+.mail-sec label {
+    width: 80%;
+    text-align: left;
+    padding-top: 6vw; 
+}
+
+.mail-sec input[type='submit'] {
+    margin-top: 3vw;
+    padding: 2.4vw 0;
+    color: white;
+    border: 1px solid white;
+    background-color:inherit;
+}
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .mail-sec {
+        padding-bottom: 20vw;
+    }
+}
+@media screen and (min-width: 768px) /* PC */
+{   
+    .mail-sec { padding-bottom: 10vw; }
+
+    .mail-sec label {
+        padding-top: 2vw; 
+    }
+
+    .mail-sec {
+        width: 60vw;
+        margin-left: 20vw;
+        padding-top: 14vw;
+    }
+
+    .mail-sec input, .mail-sec textarea {
+        margin-top: 0;
+    }
+    
+    .mail-sec input[type='submit']:hover 
+    {
+        background-color: rgba(255,255,255,0.3);
+    }
+}
+
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* CURT SECTION */
+
+
+@media screen and (max-width: 767px)  /* SP */
+{   
+    .pc-curt-a,
+    .pc-curt-img { 
+        display: none;
+        transition: 0.4s;
+    }
+
+    .curt-sec {
+        position: fixed;
+        bottom: 2vw; left: 2vw;
+        transition: 1s;
+    }
+
+    .sp-curt-btn {
+        display: none;
+        background-color: #f19072;
+        border-radius: 1vw;
+        box-shadow: 
+            2px 0.6vw rgba(0,0,0,0.2),
+            -1px -1px rgba(255,255,255,0.6);
+        opacity: 0;
+    }
+
+    .sp-curt-btn img {
+        display: inline-block;
+        width: 5vw;
+        padding: 2.4vw 2vw 0 2.4vw;
+    }
+
+    .curt-box {
+        position: fixed;
+        width: 40vw;
+        bottom: 13vw; left: 1vw;
+        padding: 0;
+    }
+
+    .curt-box > button {
+        display: none;
+        margin-top: 1vw;
+        padding: 1vw;
+        outline: none; border: none;
+        border-radius: 1vw;
+        background-color: white;
+        border: 1px solid gray;
+    }
+
+    .curt-anime-class {
+        animation-duration: 2.8s;
+        animation-name: curt-anime;
+        animation-iteration-count: unset;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes curt-anime {
+        0% { bottom: 13vw; }
+        40% { opacity: 1; }
+        80% { opacity: 1; }
+        98% { bottom: 13vw; opacity: 0; }
+        100%{ bottom: 100vw; opacity: 0; }
+    }
+
+}
+@media screen and (min-width: 768px) /* PC */
+{
+    .sp-curt-btn ,
+    .sp-curt-btn img 
+    { 
+        display: none;
+        transition: 0.4s; 
+    }
+
+    .curt-sec {
+        position: fixed;
+        top: 2vw; right: 0;
+        width: 20vw;
+    }
+
+    .pc-curt-img {
+        display: none;
+        width: 5vw;
+        margin: 2vw 0;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    .curt-box button {
+        display: none;
+        width: 16vw;
+        margin: 0.2vw 1vw;
+        padding: 1vw;
+        border-radius: 0.2vw;
+        border: none;
+        opacity: 0;
+        transition: 0.4s;
+        background-color: white;
+    }
+
+    .pc-curt-a {
+        display: none;
+        padding: 2vw 0;
+        color: white;
+        opacity: 0;
+        transition: 0.4s;
+    }
+}
+
+.opacity-anime {
+    animation-duration: 0.8s;
+    animation-name: opacity-anm;
+    animation-iteration-count: unset;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacity-anm {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* SUBMIT HTML */
+/* SUBMIT ITEM SECTION */
+
+.submit-item-sec {
+    background-color: white;
+}
+
+.submit-item-sec h1 {
+    color: black;
+}
+
+.submit-item-sec div {
+    width: 80%;
+    margin: 2% 5%;
+    padding: 5%;
+    border: 1px solid #f19072;
+}
+
+.submit-item-sec ol { width: 100%; }
+
+.submit-item-sec li {
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+    padding: 5vw 0 1vw 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.submit-item-sec p {
+    width: 80%;
+    padding: 10vw 0 1vw 0;
+}
+
+@media screen and (max-width: 767px)  /* SP */
+{
+    .submit-item-sec { padding: 20vw 0 2vw 0; }
+    .submit-item-sec h1 { padding: 3vw 0; }
+}
+@media screen and (min-width: 768px) /* PC */
+{
+    .submit-item-sec {
+        padding: 2vw 0;
+    }
+
+    .submit-item-sec h1 { padding: 3vw 0; }
+
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* SUBMIT SECTION */
+
+.submit-form {
+    background-color: white;
+}
+
+.submit-form a {
+    padding: 2vw 4vw;
+    color: white;
+    border-radius: 5vw;
+    background-color: #f19072;
+}
+
+.submit-form a:nth-last-child(1) {
+    margin: 14vw 0;
+}
+
+.submit-form > h2 {
+    padding-top: 6vw;
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    .submit-form a:nth-last-child(1) {
+        margin: 4vw 0 0 0;
+    }
+}
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* LOGIN FORM */
+
+.login-form {
+    padding: 20vw 0; 
+    background-color: white;
+}
+
+.login-form h2 { padding: 6vw 0 }
+
+.login-form a {
+    display: block;
+    margin: 10vw;
+    padding: 3vw 0;
+    color: white;
+    border-radius: 6vw;
+    background-color: #f19072;
+}
+
+@media screen and (min-width: 768px) /* PC */
+{
+    .login-form { padding: 8vw 0; }
+    
+    .login-form h2 { padding: 4vw 0 }
+    
+    .login-form a {
+        margin: 4vw 16vw;
+        padding: 1.6vw 0;
+        border-radius: 6vw;
+        transition: 0.2s;
+    }
+
+    .login-form a:hover {
+        color: #f19072;
+        background-color: white;
+        border: 1px solid #f19072;
+    }
+}
+
+
+/* ***************************************************** */
+/* ***************************************************** */
+/* SUBMIT SECTION */
+@media screen and (max-width: 767px)  /* SP */
+{
+}
+@media screen and (min-width: 768px) /* PC */
+{
+
+}

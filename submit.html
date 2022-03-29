@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>らくまい/注文</title>
+</head>
+<body>
+    <header>
+        <div id="sp-hd-id">
+            <img src="img/logo-mini.png" alt="">
+                <a href="index.html">
+                    <h1>らくまい</h1>
+                </a>
+        </div>
+
+        <div class="pc-side-menu">
+            <img src="img/logo-mini.png" alt="">
+            <h1>らくまい</h1>
+
+            <div>
+                <a href="index.html">トップ</a>
+            </div>
+        </div>
+    </header>   
+
+    <section class='submit-item-sec pc-center'>
+        <h1>ご注文内容</h1>
+        <div>
+            <ol>
+                <li>仮のitem×1点&emsp;500円</li>
+                <li>仮のitem×1点&emsp;500円</li>
+                <li>仮のitem×1点&emsp;500円</li>
+            </ol>
+            <p>計3点&emsp;&emsp;1,500円</p>
+        </div>
+    </section>
+
+    <section class='submit-form pc-center'>
+        <a href="login.html">登録済みの方はこちらから注文画面へ >> </a>
+        <h2>初めてご注文の方は<br>下記へご記入ください</h2>
+        <form action="POST">
+            <label><span>*</span>お名前</label>
+            <input name='name' type="text" autocomplete="name" placeholder='楽田米子' required/>
+
+            <label><span>*</span>ふりがな</label>
+            <input name='name_on' type="text" placeholder='らくだまいこ' required/>
+
+            <label><span>*</span>郵便番号</label>
+            <input type="text" name="zip11" size="10" maxlength="8" placeholder='0001111' onKeyUp="AjaxZip3.zip2addr(this,'','address-level1','address-level1');" autocomplete="postal-code" required/>
+
+            <label><span>*</span>都道府県</label>
+            <input type="text" name="address-level1" size="60" autocomplete="address-level1" required/>
+
+            <label><span>*</span>市区町村</label>
+            <input type="text" name="address-level2" size="60" autocomplete="address-level2" required/>
+
+            <label><span>*</span>番地・マンション名(1)</label>
+            <input type="text" name="address-line1" size="60" autocomplete="address-line1" required/>
+
+            <label>番地・マンション名(2)</label>
+            <input type="text" name="address-line2" size="60" autocomplete="address-line2" />
+
+            <label><span>*</span>メールアドレス</label>
+            <input type="email" name="email" autocomplete="email" required/>
+
+            <label><span>*</span>電話番号</label>
+            <input type="tel" name="tel" autocomplete="tel" placeholder='0001111' required/>
+
+            <label>登録もする方は<br>パスワードを入力してください</label>
+            <input type="password" name="pass" placeholder='8文字以上' />
+
+            <!-- <input type="submit" value='注文する'> -->
+            <a href="#">注文する</a>
+        </form>
+    </section>
+
+    <footer>
+        <div>
+            <a href="index.html">トップへ</a>
+        </div>
+        <p>@2022 Riho Isobe</p>
+    </footer>
+
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <!-- <script src="js/js.js"></script> -->
+</body>
+</html>
