@@ -187,31 +187,24 @@ function curtCheck(item_id) {
 }
 
 //ウインドウサイズが変わった時のカートの処理
+var lastInnerWidth = window.innerWidth ;
 function resizeWindow(event)
 {
-    if (itemCount() >= 1) {
-        curt_box.style.display = 'inline';
-        if ( window.innerWidth >= 768 ) {   
-            spCurtRestart('off');
-            pcCurtRestart('on');
-        } 
-        else {
-            pcCurtRestart('off');
-            spCurtRestart('restart');
-        } 
-    }
+    if ( lastInnerWidth != window.innerWidth ) {
+		lastInnerWidth = window.innerWidth ;
+        if (itemCount() >= 1) {
+            curt_box.style.display = 'inline';
+            if ( window.innerWidth >= 768 ) {   
+                spCurtRestart('off');
+                pcCurtRestart('on');
+            } 
+            else {
+                pcCurtRestart('off');
+                spCurtRestart('restart');
+            } 
+        }
+	}
 }
 
 window.addEventListener('resize', resizeWindow);
 
-/*
-あとやるこt
-スクロールで動くものたち実装
-ページジャンプの時
-タイトルのフォント
-商品一覧の画像直す
-注文完了画面
-お問い合わせ完了画面
-
-js の読み込み 
-*/
