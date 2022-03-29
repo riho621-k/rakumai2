@@ -716,9 +716,9 @@ footer > p {
 
 .item-sec table { width: 90%; padding: 5% 5% 0 5%; }
 
-.table-pink th:nth-child(odd) { width: 20%; }
+.table-pink th:nth-child(odd) { width: calc(20% - 4vw); }
 
-.table-pink th:nth-child(even) { width: 30%; }
+.table-pink th:nth-child(even) { width: calc(30% - 4vw); }
 
 .table-pink td:nth-child(odd) {
     background-color: rgba(244,144,114,0.2);
@@ -733,7 +733,7 @@ footer > p {
 .table-pink td {  padding: 2vw; }
 
 .table-white th { 
-    width: 20%; 
+    width: calc(20% - 4vw);
     padding: 2vw;
     border-top-left-radius: 2vw;
     border-bottom-left-radius: 2vw;
@@ -741,7 +741,7 @@ footer > p {
 }
 
 .table-white td { 
-    width: 30%; 
+    width: calc(30% - 4vw);
     padding: 2vw;
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
