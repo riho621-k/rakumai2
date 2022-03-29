@@ -32,7 +32,7 @@ body {
 section { font-size: 0; }
 
 p, a, h1, h2, h3, h4, h5, ul, li, ol, ::placeholder,
-table, td, th, select, button, span, label, input, textarea 
+td, th, select, button, span, label, input, textarea 
 {
     display: inline-block;
     font-weight: normal; line-height: 1.7;
@@ -45,11 +45,14 @@ li {
     display: list-item; text-align: left;
 }
 
+td, th { display:table-cell;}
+
 h1, h2, h3 { 
     display: block; 
     font-family: 'Hiragino Sans W1','メイリオ', 'Meiryo', sans-serif;
     font-weight: bold;
-    }
+}
+
 ::placeholder { color: rgba(0,0,0,0.2); }
 
 @media screen and (max-width: 767px)  /* SP */
@@ -639,16 +642,26 @@ footer > p {
 
 .good-sec h2 { color:white; }
 
+.good-sec table {
+    width: 100%;
+    padding: 5%;
+    border-spacing: 2vw;
+}
+
+.good-sec tbody, .good-sec tr { width: 100%; }
+
 .good-sec td {
-    padding: 4vw;
+    width: calc( 70% - 4vw );
+    padding: 2vw;
     color: rgba(0,0,0,0.8);
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.2);
     box-shadow: 0 3px rgba(0,0,0,0.2);
+    color: white;
 }
 
 .good-sec td:nth-child(odd) {
-    background-color: rgba(255,255,255,0.2);
-    color: white;
+    width: calc( 30% - 4vw );
+    background-color: rgba(255,255,255,0.4);
 }
 
 .good-sec th {
@@ -665,23 +678,17 @@ footer > p {
 
     .good-sec h2 { padding-top: 30vw; }
 
-    .good-sec table {
-        margin: 6vw 2vw 0 2vw;
-        border-spacing: 2vw;
-    }
-
-    .good-sec td { border-radius: 2vw; }
+    .good-sec td,
+    .good-sec th { border-radius: 2vw; }
 }
 @media screen and (min-width: 768px) /* PC */
 {
-    
     .good-sec { 
         padding-top: 10vw;
         padding-bottom: 30vw;
     }
 
     .good-sec table {
-        margin: 4vw 2vw 0 2vw;
         border-spacing: 0.8vw;
     }
 
@@ -718,40 +725,44 @@ footer > p {
 .item-sec button { width: 80%; padding: 3% 5%; }
 
 .item-sec table { 
+    width: 100%;
     padding: 5% 5% 0 5%; 
     table-layout: fixed;
 }
 
-.table-pink th:nth-child(odd) { width: 50%; }
+.table-pink th {
+    width: 60%;
+    padding: 2vw;
+    border-radius: 2vw;
+}
 
-.table-pink th:nth-child(even) { width: 50%; }
+.table-pink th:nth-child(odd) {
+    width: 40%; 
+}
+
+.table-pink td {
+    padding: 2vw;
+    color: white;
+    border-radius: 2vw;
+    background-color: rgba(244,144,114,1);
+}
 
 .table-pink td:nth-child(odd) {
-    background-color: rgba(244,144,114,0.2);
+    background-color: rgba(244,144,114,0.8);
 }
-
-.table-pink td:nth-child(even) {
-    background-color: rgba(241,144,114,0.6);
-}
-
-.table-pink th { padding: 2vw; color: #f19072; }
-
-.table-pink td { padding: 2vw; }
 
 .table-white th { 
     width: calc(20% - 4vw); 
     padding: 2vw;
-    border-top-left-radius: 2vw;
-    border-bottom-left-radius: 2vw;
-    background-color: rgba(244,144,114,0.4);
+    background-color: rgba(244,144,114,1);
+    color: white;
 }
 
 .table-white td { 
     width: calc(30% - 4vw); 
     padding: 2vw;
-    border-top-right-radius: 2vw;
-    border-bottom-right-radius: 2vw;
-    background-color: rgba(244,144,114,0.6);
+    background-color: rgba(244,144,114,0.8);
+    color: white;
 }
 
 @media screen and (max-width: 767px)  /* SP */
@@ -789,12 +800,16 @@ footer > p {
         border: 1px solid #f19072;
     }
 
-    .table-pink th, .table-pink td {
-        border-radius: 2vw;
+    .table-white th { 
+        border-top-left-radius: 2vw;
+        border-bottom-left-radius: 2vw;
     }
-
-    .table-white { border-spacing: 0 2vw; }
-
+    
+    .table-white td { 
+        border-top-right-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+    }
+    
 }
 
 @media screen and (min-width: 768px) /* PC */
@@ -853,6 +868,17 @@ footer > p {
     }
 
     .table-white { border-spacing: 0 1vw; }
+
+    .table-white th { 
+        border-top-left-radius: 0.5vw;
+        border-bottom-left-radius: 0.5vw;
+    }
+    
+    .table-white td { 
+        border-top-right-radius: 0.5vw;
+        border-bottom-right-radius: 0.5vw;
+    }
+
 }
 
 /* ***************************************************** */
