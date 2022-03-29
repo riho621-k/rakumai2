@@ -2,7 +2,7 @@
 /* ***************************************************** */
 /* DEFOULT STYLE */
 
-::-webkit-scrollbar { display: none; }
+*::-webkit-scrollbar { display: none; }
 
 * { 
     margin: 0; padding: 0;
@@ -14,7 +14,7 @@ body {
     width: 100vw; 
     background-color: #f19072;
     text-align: center;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 768px) /* PC */
