@@ -14,6 +14,7 @@ body {
     width: 100vw; 
     background-color: #f19072;
     text-align: center;
+	overflow-x: hidden;
 }
 
 @media screen and (min-width: 768px) /* PC */
