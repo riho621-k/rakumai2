@@ -558,6 +558,7 @@ footer > p {
 .about-sec > img {   
     position: absolute;
     width: 100%;
+    z-index: 0;
     transform: scale(-1,-1);
 }
 
