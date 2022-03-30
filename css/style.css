@@ -34,12 +34,12 @@ body {
 /* FONT STYLE */
 @font-face {
 	font-family: 'hiragino';
-	src: url(/font/hiragi.otf);
+	src: url(../font/hiragi.otf);
 }
 
 @font-face {
 	font-family: 'hiragino-bold';
-	src: url(/font/hiragi-bold.otf);
+	src: url(../font/hiragi-bold.otf);
 }
 
 section { font-size: 0; }
