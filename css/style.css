@@ -7,7 +7,6 @@
     -webkit-appearance: none; 
 }
 
-
 * { 
     -webkit-text-size-adjust: 100%;
     margin: 0; padding: 0;
@@ -33,6 +32,15 @@ body {
 /* ***************************************************** */
 /* ***************************************************** */
 /* FONT STYLE */
+@font-face {
+	font-family: 'hiragino';
+	src: url(/font/hiragi.otf);
+}
+
+@font-face {
+	font-family: 'hiragino-bold';
+	src: url(/font/hiragi-bold.otf);
+}
 
 section { font-size: 0; }
 
@@ -41,8 +49,13 @@ td, th, select, button, span, label, input, textarea
 {
     display: inline-block;
     font-weight: normal; line-height: 1.7;
-    font-family: 'Hiragino Sans W0','メイリオ', 'Meiryo', sans-serif;
+    font-family: 'hiragino','Hiragino Sans W0','メイリオ', 'Meiryo', sans-serif;
     color: black;
+}
+
+input, textarea, select, option, ol, li, ul
+{
+    font-family: 'Hiragino Sans W0','メイリオ', 'Meiryo', sans-serif;
 }
 
 li { 
@@ -54,7 +67,7 @@ td, th { display:table-cell; }
 
 h1, h2, h3 { 
     display: block; 
-    font-family: 'Hiragino Sans W1','メイリオ', 'Meiryo', sans-serif;
+    font-family: 'hiragino-bold','Hiragino Sans W1','メイリオ', 'Meiryo', sans-serif;
     font-weight: bold;
 }
 
