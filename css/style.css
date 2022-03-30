@@ -520,6 +520,11 @@ footer > p {
     z-index:-1;
 }
 
+.question-sec > p {
+    width: 90%;
+    padding: 10%;
+}
+
 .question-sec > h2 { color: black; }
 
 @media screen and (max-width: 767px)  /* SP */
@@ -529,22 +534,12 @@ footer > p {
     .question-sec > img { top: -40vw; }
 
     .question-sec > h2 { padding-top: 12vw; }
-
-    .question-sec > p {
-        width: calc(100% - 10%);
-        padding: 5%;
-    }
 }
 @media screen and (min-width: 768px) /* PC */
 {
     .question-sec > img { top: -24vw; }
 
     .question-sec > h2 { padding-top: 5vw; }
-
-    .question-sec > p {
-        width: calc(100% - 10%);
-        padding: 5%;
-    }
 }
 /* ***************************************************** */
 /* ***************************************************** */
