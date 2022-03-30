@@ -96,16 +96,16 @@ h1, h2, h3 {
     h1 { 
         margin-bottom: 3vh;
         color: white;
-        font-size: 2vw; 
+        font-size: 2.4vw; 
     }
-    h2 { font-size: 2vw; }
-    h3 { font-size: 1.7vw; }
-    h4 { font-size: 1.6vw; }
+    h2 { font-size: 2.2vw; }
+    h3 { font-size: 2vw; }
+    h4 { font-size: 1.8vw; }
 
     p, a,label, table,td, th, button, span, ul, li, ol,
     input, select, textarea, ::placeholder
     { 
-        font-size: 1.4vw; 
+        font-size: 1.6vw; 
     }
 
 } 
@@ -665,15 +665,15 @@ footer > p {
 .good-sec td {
     width: calc( 70% - 10% );
     padding: 5%;
-    color: rgba(0,0,0,0.8);
+    color:white;
     background-color: rgba(255,255,255,0.2);
     box-shadow: 0 3px rgba(0,0,0,0.2);
-    color: white;
 }
 
 .good-sec td:nth-child(odd) {
     width: calc( 30% - 10% );
-    background-color: rgba(255,255,255,0.4);
+    color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.6);
 }
 
 .good-sec th {
