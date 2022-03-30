@@ -7,7 +7,9 @@
     -webkit-appearance: none; 
 }
 
+
 * { 
+    -webkit-text-size-adjust: 100%;
     margin: 0; padding: 0;
     text-decoration: none; 
     color: inherit;
@@ -48,7 +50,7 @@ li {
     display: list-item; text-align: left;
 }
 
-td, th { display:table-cell;}
+td, th { display:table-cell; }
 
 h1, h2, h3 { 
     display: block; 
@@ -136,10 +138,9 @@ label {
 @media screen and (max-width: 767px)  /* SP */
 {
     select, input, textarea {
-        width: calc(80% - 4vw);
-        padding: 1vw 2vw;
+        width: calc(80% - 8%);
+        padding: 1vw 4%;
     }
-    
 }
 
 @media screen and (min-width: 768px) /* PC */
@@ -150,10 +151,9 @@ label {
     }
 
     select, input, textarea {
-        width: calc(80% - 2vw);
-        padding: 0.5vw 1vw;
+        width: calc(80% - 8%);
+        padding: 1vw 4%;
     }
-    
 }
 
 /* ***************************************************** */
@@ -518,8 +518,8 @@ footer > p {
     .question-sec > h2 { padding-top: 12vw; }
 
     .question-sec > p {
-        width: calc(100% - 20vw);
-        padding: 10vw;
+        width: calc(100% - 10%);
+        padding: 5%;
     }
 }
 @media screen and (min-width: 768px) /* PC */
@@ -529,8 +529,8 @@ footer > p {
     .question-sec > h2 { padding-top: 5vw; }
 
     .question-sec > p {
-        width: calc(100% - 20vw);
-        padding: 10vw;
+        width: calc(100% - 10%);
+        padding: 5%;
     }
 }
 /* ***************************************************** */
@@ -654,8 +654,8 @@ footer > p {
 .good-sec tbody, .good-sec tr { width: 100%; }
 
 .good-sec td {
-    width: calc( 70% - 4vw );
-    padding: 2vw;
+    width: calc( 70% - 10% );
+    padding: 5%;
     color: rgba(0,0,0,0.8);
     background-color: rgba(255,255,255,0.2);
     box-shadow: 0 3px rgba(0,0,0,0.2);
@@ -663,7 +663,7 @@ footer > p {
 }
 
 .good-sec td:nth-child(odd) {
-    width: calc( 30% - 4vw );
+    width: calc( 30% - 10% );
     background-color: rgba(255,255,255,0.4);
 }
 
@@ -755,15 +755,15 @@ footer > p {
 }
 
 .table-white th { 
-    width: calc(20% - 4vw); 
-    padding: 2vw;
+    width: calc(20% - 6%); 
+    padding: 3%;
     background-color: rgba(244,144,114,1);
     color: white;
 }
 
 .table-white td { 
-    width: calc(30% - 4vw); 
-    padding: 2vw;
+    width: calc(30% - 6%); 
+    padding: 3%;
     background-color: rgba(244,144,114,0.8);
     color: white;
 }
@@ -781,7 +781,7 @@ footer > p {
     }
     
     .item-sec > div {
-        width: calc(88vw - 1vw);
+        width: 87vw;
         margin: 6vw 6vw 0 6vw;
         padding: 8vw 0;
         border-radius: 2vw;
@@ -828,7 +828,7 @@ footer > p {
     }
     
     .item-sec > div {
-        width: calc(50vw - 0.4vw);
+        width: 49.6vw;
         margin: 6vw 5vw 0 5vw;
         padding: 2vw 0;
         border-radius: 1vw;
