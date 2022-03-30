@@ -663,7 +663,7 @@ footer > p {
 .good-sec tbody, .good-sec tr { width: 100%; }
 
 .good-sec td {
-    width: calc( 70% - 10% );
+    width: calc(60% - 10% );
     padding: 5%;
     color:white;
     background-color: rgba(255,255,255,0.2);
@@ -671,9 +671,9 @@ footer > p {
 }
 
 .good-sec td:nth-child(odd) {
-    width: calc( 30% - 10% );
+    width: calc( 40% - 10% );
     color: rgba(0,0,0,0.8);
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
 }
 
 .good-sec th {
