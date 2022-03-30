@@ -511,6 +511,7 @@ footer > p {
 .question-sec {
     position: relative;
     background-color: white;
+    padding-bottom: 5vw;
 }
 
 .question-sec > img {
@@ -522,7 +523,8 @@ footer > p {
 
 .question-sec > p {
     width: 90%;
-    padding: 10%;
+    padding: 5%;
+    margin-bottom: 4vw;
 }
 
 .question-sec > h2 { color: black; }
